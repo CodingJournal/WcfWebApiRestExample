@@ -4,11 +4,6 @@ using System.ServiceModel.Web;
 
 namespace Server
 {
-    /// <summary>
-    /// Our service contract, this should look familiar to you if you know WCF.
-    /// If you've never used WCF before, you should check out the screen casts
-    /// at http://msdn.microsoft.com/en-us/netframework/dd939784
-    /// </summary>
     [ServiceContract]
     public interface IRestService
     {
@@ -20,7 +15,6 @@ namespace Server
         [WebInvoke(BodyStyle = WebMessageBodyStyle.Wrapped)]
         bool CreateNewUser(string username, string password);
     }
-
 
 
     public class RestService : IRestService
@@ -44,7 +38,6 @@ namespace Server
             return true;
         }
     }
-
 
 
     class Program

@@ -17,6 +17,7 @@ namespace Client
         bool CreateNewUser(string username, string password);
     }
 
+
     class Program
     {
         private const string RestUri = "http://localhost:8080";
@@ -49,7 +50,6 @@ namespace Client
             {
                 Console.WriteLine("An exception occurred: {0}", e.Message);
             }
-
         }
     }
 }
